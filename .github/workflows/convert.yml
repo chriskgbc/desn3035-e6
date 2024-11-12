@@ -65,8 +65,8 @@ jobs:
         uses: actions/upload-release-asset@v1
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./downloaded_docs/*
-          asset_name: docs.md
+          asset_path: ./downloaded_docs/terms.md
+          asset_name: terms.md
           asset_content_type: text/markdown
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
