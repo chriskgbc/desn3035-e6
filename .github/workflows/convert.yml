@@ -13,19 +13,19 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      # - uses: baileyjm02/markdown-to-pdf@v1
-      #   with:
-      #     input_dir: docs
-      #     output_dir: pdfs
-      #     images_dir: docs/images
-      #     # for example <img src="./images/file-name.png">
-      #     image_import: ./images
-      #     # Default is true, can set to false to only get PDF files
-      #     build_html: false
+      - uses: baileyjm02/markdown-to-pdf@v1
+        with:
+          input_dir: docs
+          output_dir: pdfs
+          images_dir: docs/images
+          # for example <img src="./images/file-name.png">
+          image_import: ./images
+          # Default is true, can set to false to only get PDF files
+          build_html: false
       - uses: actions/upload-artifact@v3
         with:
           name: docs
-          path: docs
+          path: pdfs
 
   release:
     name: Create Release and Upload Artifact
@@ -65,8 +65,8 @@ jobs:
         uses: actions/upload-release-asset@v1
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./downloaded_docs/terms.md
-          asset_name: terms.md
-          asset_content_type: text/markdown
+          asset_path: ./downloaded_docs/terms.pdf
+          asset_name: terms.pdf
+          asset_content_type: application/pdf
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
