@@ -1,6 +1,6 @@
 # Terms and Conditions
 
-_Last Updated: November 12, 2024_
+_Last Updated: November 13, 2024_
 
 > **Welcome to ACME Company**. By using our website, you agree to the following Terms and Conditions. Please read them carefully.
 
@@ -33,3 +33,4 @@ For questions about these Terms, please contact us at contact@acmecompany.com.
 | Name    | Email              |
 |---------|--------------------|
 | Chris K | ck@acmecompany.com |
+| Joyce C | jc@acmecompany.com |
